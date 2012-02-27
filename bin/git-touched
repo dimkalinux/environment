@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+commit=$1
+if [ -z $commit ]; then
+    git status --short | sed -E 's/^ *.* +//' 
+else
+    git diff --name-only ${commit}..${commit}^ 
+fi
+

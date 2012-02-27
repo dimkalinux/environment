@@ -1,0 +1,15 @@
+# environment
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export EDITOR=vim
+export MANPATH=$HOME/man:$MANPATH
+
+# sphinx fix
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+# enable terminal colors
+export CLICOLOR=1
+
+# enable darcs colors
+export DARCS_ALWAYS_COLOR=1
+export DARCS_DO_COLOR_LINES=1
+

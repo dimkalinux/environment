@@ -1,0 +1,13 @@
+MYSQL_VERSION=5
+MYSQL_BIN_DIR=`dirname $0`/../mysql$MYSQL_VERSION/bin
+
+if [ "$1" = "start" ] ; then
+    $MYSQL_BIN_DIR/mysqld_safe &
+elif [ "$1" = "restart" ] ; then
+    mysql stop
+    mysql start
+elif [ "$1" = "stop" ] ; then
+    $MYSQL_BIN_DIR/mysqladmin -u root shutdown
+else
+    $MYSQL_BIN_DIR/bin/mysql -uroot $*
+fi

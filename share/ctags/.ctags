@@ -1,0 +1,20 @@
+--tag-relative=yes
+--totals=yes
+--recurse
+
+--exclude='_darcs'
+--exclude='.git'
+--exclude='.svn'
+--exclude='*/cache/*'
+--exclude='*/logs/*'
+--exclude='*/data/*'
+--exclude='*/build/*'
+
+--PHP-kinds=+cf
+--regex-PHP=/abstract\s+class\s+([^ ]+)/\1/c/ 
+--regex-PHP=/interface\s+([^ ]+)/\1/c/ 
+--regex-PHP=/final\s+(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/
+--regex-PHP=/const\s+([^ 	=]+)/\1/d/
+
+--python-kinds=-i
+

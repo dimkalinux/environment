@@ -1,0 +1,27 @@
+#! /usr/bin/env bash
+
+if [ "$(id -u)" != "0" ]; then
+    echo "This script must be run as root!" 1>&2
+    exit 1
+fi
+
+DEVICE=$1
+if [ -z $DEVICE ]; then
+    echo "Device not specified." 1>&2
+    exit 1
+fi
+shift
+
+INFO=$(ifconfig $DEVICE 2>/dev/null) 
+if [ $? != 0 ]; then
+    echo "Device ${DEVICE} not found."
+    exit 1
+fi
+
+IP=$(echo $INFO | \
+     grep inet | \
+     grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | \
+     head -n1)
+
+tcpdump -i $DEVICE -s 65535 $@ "src host ${IP}"
+

@@ -1,0 +1,22 @@
+./configure --prefix=/usr/local/php5 \
+            --with-config-file-path=/usr/local/php5/etc \
+            --disable-debug \
+            --enable-inline-optimization \
+            --enable-mbstring \
+            --with-apxs2=/usr/local/apache2/bin/apxs \
+            --enable-shared=all \
+            --enable-intl \
+            --enable-pcntl \
+            --enable-soap \
+            --with-zlib \
+            --with-bz2 \
+            --with-curl \
+            --with-freetype-dir=/usr/local \
+            --with-jpeg-dir=/usr/local \
+            --with-png-dir=/usr/local \
+            --with-gd \
+            --with-mcrypt=/usr/local \
+            --with-openssl=/usr \
+            --with-iconv \
+            --with-readline \
+            --with-pdo-mysql=mysqlnd

@@ -1,0 +1,2 @@
+# Disables session restore. Prevents opening previously opened files on launch
+defaults write com.macromates.textmate OakDisableSessionRestore 1

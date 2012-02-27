@@ -1,0 +1,81 @@
+#! /usr/bin/env bash
+#
+# Uses the given ref to determine all files that have been created or changed
+# in that commit. The file list is then used to load VIM in diff mode and to 
+# show a split view of the new and old file. Each changed file is opened in
+# a new VIM tab for easy navigation.
+#
+# Example: Let's say you have a commit 'd2af5' which created a file 'foo.py' 
+# and modified file 'bar.py'. This commit was made a while ago and you want to
+# see exactly what was changed in that commit. You don't want to compare with
+# the current HEAD, instead you want to compare the commit with it's parent.
+#
+#     git-show-diff d2af5
+#
+# That will open VIM with 2 tabs. The first tab will contain 'bar.py' in a split
+# view in diff mode. The window on the left will show the newer version of the
+# file (or, the file at d2af5) and the right will show the older version of the 
+# file (or, the file at d2af5^). The second tab will show the contents of 
+# 'foo.py' in a single window. The split view and diff mode are not used in the
+# the second tab because 'foo.py' was created in this commit and here is nothing
+# to compare it to.
+#
+# Note: I haven't tested this with binary files yet. I will soon though and fix
+# any potential issues.
+# 
+# Author: Artem Nezvigin <artem@artnez.com
+# License: MIT, see LICENSE for details
+
+COMMIT='HEAD';
+if [ -n "$1" ]; then 
+    COMMIT=$1; shift; 
+fi
+
+CHANGED_FILES=($(git diff --name-only $@ $COMMIT^..$COMMIT))
+CHANGED_COUNT=${#CHANGED_FILES[@]}
+
+if [ $CHANGED_COUNT -lt 1 ]; then
+    echo "nothing to diff. goodbye."
+    exit
+fi
+
+TMP_FILES=()
+function cleanup() {
+    echo "${TMP_FILES[@]}"
+    rm -f "${TMP_FILES[@]}"
+}
+trap cleanup EXIT
+
+VIM_TABS=()
+VIM_EXEC=''
+for (( i=0; i<$CHANGED_COUNT; i++ )); do
+    FILE_PATH=${CHANGED_FILES[$i]}
+    FILE_NAME=$(basename $FILE_PATH)
+    FILE_EXT=${FILE_NAME##*.}
+    FILE_HASH=$(echo $FILE_PATH | openssl md5 | grep -o "\([0-9a-z]\{32\}\)")
+
+    TMP_PATH_OLD="/tmp/git-show-diff-buffer-${FILE_HASH}-old.${FILE_EXT}"
+    TMP_PATH_NEW="/tmp/git-show-diff-buffer-${FILE_HASH}-new.${FILE_EXT}"
+
+    # handle new revision of file
+    git show $COMMIT:$FILE_PATH > $TMP_PATH_NEW 2> /dev/null
+    TMP_FILES=("${TMP_FILES[@]}" "$TMP_PATH_NEW")
+    if [ $? != 0 ]; then
+        echo 'error: failed opening "${COMMIT}:${FILE_PATH}"'
+        exit 1
+    fi
+    VIM_TABS=("${VIM_TABS[@]}" $TMP_PATH_NEW)
+  
+    # handle old revision of file
+    git show $COMMIT^:$FILE_PATH > $TMP_PATH_OLD 2> /dev/null
+    TMP_FILES=("${TMP_FILES[@]}" "$TMP_PATH_OLD")
+    if [ $? == 0 ]; then
+        VIM_EXEC="${VIM_EXEC}diffthis|vnew $TMP_PATH_OLD|diffthis|wincmd w|tabnext|"
+    else
+        VIM_EXEC="${VIM_EXEC}tabnext|"    
+    fi
+done
+
+VIM_TABS=$(printf " %s" "${VIM_TABS[@]}")
+vim -c "${VIM_EXEC}" -p $VIM_TABS
+

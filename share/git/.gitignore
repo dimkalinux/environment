@@ -1,0 +1,20 @@
+# IDEs
+.settings
+.buildpath
+.idea
+.localized
+
+# OSX
+.DS_Store
+Icon
+.dropbox
+
+# VIM
+*.swp
+
+# Python
+*.pyc
+
+# CTAGS
+tags
+

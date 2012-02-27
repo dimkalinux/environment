@@ -1,0 +1,93 @@
+#! /usr/bin/env bash
+
+#change to the current directory
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+ENVDIR="$( cd -P "$( dirname "$SOURCE" )"/../ && pwd )"
+cd $ENVDIR
+
+# include shared libraries
+. $ENVDIR/share/bash/lib/shflags-1.0.3/src/shflags
+
+# load script options
+FLAGS_HELP='usage: $0 [flags] <target>'
+
+DEFINE_boolean 'force' 'false' 'overwrite existing files' 'f'
+DEFINE_boolean 'local' 'false' 'local update only' 'l'
+
+FLAGS "$@" || exit 1
+eval set -- "${FLAGS_ARGV}"
+
+# initialize (validate option inputs, show debug info, set defaults)
+echo "initializing..."
+
+TARGET=${1:-$HOME}
+if [ ! -d $TARGET ]; then
+    echo -e "\nerror: target is not a directory: ${TARGET}" 1>&2
+    exit 1
+fi
+
+# download new changes
+if [ $FLAGS_local == $FLAGS_FALSE ]; then
+    echo -n "download changes... "
+    error=$(git pull --quiet 2>&1 >/dev/null)
+    if [[ "$?" != "0" ]]; then 
+        echo "failed!"
+        echo -e "$error"
+        exit 1
+    fi
+    echo "ok"
+fi
+
+# link dotfiles
+echo "linking dotfiles..."
+for filepath in $ENVDIR/share/*/.*; do 
+    filename=`basename $filepath`
+    dst_path=$TARGET/$filename
+
+    # skip dot dirs
+    [ "$filename" == '.' -o "$filename" == '..' ] && continue
+
+    # delete old dotfile if forced, skip otherwise
+    status='new'
+    if [ -r $dst_path ]; then
+        if [ $FLAGS_force == $FLAGS_TRUE ]; then
+            status='override'
+            rm $dst_path
+        else
+            if [ -L $dst_path ]; then
+                filename="${filename}@"
+            fi
+            echo "  > skipping ${filename}"
+            continue
+        fi
+    fi
+
+    # link dotfile
+    echo "  > linking ${filename}"
+    ln -s $filepath $dst_path
+done
+
+# create generated bash config with environment specific data that can only be
+# generated at runtime. this file will also be overwritten.
+echo "generating bash auto config..."
+
+CFG_NAME='.bash_auto'
+CFG_PATH=$ENVDIR/bin
+
+for name in CFG_NAME CFG_PATH; do
+    echo "  > $name: ${!name}"
+done
+
+if [ -r $TARGET/$CFG_NAME ]; then 
+    rm $TARGET/$CFG_NAME
+fi
+
+echo $( cat <<EOF
+export PATH=$CFG_PATH:\$PATH
+EOF
+) > $TARGET/$CFG_NAME
+
+# apply changes
+source $TARGET/.bash_profile
+

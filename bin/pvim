@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+# 
+# Pipe a file list into this command and it will be opened in VIM. Currently
+# supports and was tested with the `find` command only. I'll add more support
+# as I need it.
+#
+# Author: Artem Nezvigin
+# License: MIT, see LICENSE for details
+
+FILES=''
+while [ True ]; do
+    read FILE
+    [ -z "$FILE" ] && break
+    FILES="${FILES} ${FILE}"
+done
+
+sh -c "< /dev/tty vim -p ${FILES}"
+ 

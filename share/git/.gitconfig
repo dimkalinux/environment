@@ -1,0 +1,15 @@
+[user]
+	name = Artem Nezvigin
+	email = artem@artnez.com
+[core]
+	excludesfile = ~/.gitignore
+[diff]
+    tool = vimdiff
+[color]
+	ui = true
+    branch = always
+    diff = always
+    status = always
+[alias]
+    st = status
+    co = checkout

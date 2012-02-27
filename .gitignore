@@ -1,0 +1,13 @@
+# vim: file history
+share/vim/.vim/.netrwhist
+share/vim/.vim/spell/en.ascii.add.spl
+
+# vim: command-t plugin build files
+share/vim/.vim/ruby/command-t/Makefile
+share/vim/.vim/ruby/command-t/ext.bundle
+share/vim/.vim/ruby/command-t/ext.o
+share/vim/.vim/ruby/command-t/ext.so
+share/vim/.vim/ruby/command-t/match.o
+share/vim/.vim/ruby/command-t/matcher.o
+share/vim/.vim/ruby/command-t/mkmf.log
+

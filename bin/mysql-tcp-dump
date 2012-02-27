@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+DEVICE=${DEVICE:-'eth0'}
+PORT=${PORT:-'3306'}
+tcpdump -i $DEVICE port $PORT -s 65535 -x -n -q -tttt | \
+    pt-query-digest --type tcpdump $@
+

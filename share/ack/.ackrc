@@ -1,0 +1,5 @@
+--color
+--color-filename=bold green
+--color-match=bold magenta
+--color-lineno=bold green
+
