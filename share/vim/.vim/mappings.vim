@@ -1,9 +1,6 @@
 " set the leader key
 let mapleader=','
 
-" open the current ctag in a new tab
-map <c-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
 " omnicompletion helpers
 inoremap <c-space> <c-x><c-o>
 imap <c-@> <c-space>
@@ -51,8 +48,10 @@ nnoremap + <c-w>=
 nnoremap <c-h> <c-w><c-h>
 nnoremap <c-l> <c-w><c-l>
 
-" tag list
+" tag management
 nnoremap <c-p> :TlistToggle<cr>
+nnoremap <c-{> :tselect <cr>:exec("tag ".expand("<cword>"))<cr>
+nnoremap <c-\> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
 
 " folding
 vnoremap f :fold<cr>
