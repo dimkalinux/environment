@@ -30,7 +30,8 @@ set showcmd
 set showmatch
 set number
 set colorcolumn=81
-"set statusline="%f %y%([%R%M]%)%{'!'[&ff=='".&ff."']}%{'$'[!&list]}%{'~'[&pm=='']}%=#%n %l/%L,%c%V "
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set laststatus=2
 
 " movement
 set whichwrap+=<,>,[,],h,l
