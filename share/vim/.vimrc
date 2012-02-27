@@ -32,6 +32,7 @@ set number
 set colorcolumn=81
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set laststatus=2
+set nohlsearch
 
 " movement
 set whichwrap+=<,>,[,],h,l
