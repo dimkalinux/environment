@@ -1,6 +1,5 @@
 # vim: file history
 share/vim/.vim/.netrwhist
-share/vim/.vim/spell/en.ascii.add.spl
 
 # vim: command-t plugin build files
 share/vim/.vim/ruby/command-t/Makefile
