@@ -50,7 +50,6 @@ nnoremap <c-l> <c-w><c-l>
 
 " tag management
 nnoremap <c-p> :TlistToggle<cr>
-nnoremap <c-{> :tselect <cr>:exec("tag ".expand("<cword>"))<cr>
 nnoremap <c-\> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
 
 " folding
