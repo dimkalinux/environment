@@ -2,7 +2,7 @@
 let mapleader=','
 
 " open the current ctag in a new tab
-map <c-\> :tab split<cr>:exec("tag ".expand("<cword>"))<cr>
+map <c-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " omnicompletion helpers
 inoremap <c-space> <c-x><c-o>
@@ -21,10 +21,12 @@ inoremap <f1> <esc>:set hlsearch! hlsearch?<cr>
 nnoremap <f2> :set spell! spell?<cr>
 inoremap <f2> <esc>:set spell! spell?<cr>
 
-" tab management
+" buffer management
 nnoremap <c-n> :Scratch<cr>
 nnoremap <c-left> :BufSurfBack<cr>
 nnoremap <c-right> :BufSurfForward<cr>
+nnoremap <left> <c-w><c-h>
+nnoremap <right> <c-w><c-l>
 
 " self explanatory
 nmap <space> zz
