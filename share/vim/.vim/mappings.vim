@@ -25,15 +25,13 @@ inoremap <f2> <esc>:set spell! spell?<cr>
 nnoremap <c-n> :Scratch<cr>
 nnoremap <c-left> :BufSurfBack<cr>
 nnoremap <c-right> :BufSurfForward<cr>
-nnoremap <left> <c-w><c-h>
-nnoremap <right> <c-w><c-l>
 
 " self explanatory
 nmap <space> zz
 
 " smart delete to end of previous line 
-nnoremap <c-h> ^:s/\s*//<cr>i<bs><esc>
-inoremap <c-h> <esc>^:s/\s*//<cr>i<bs>
+nnoremap <c-k> ^:s/\s*//<cr>i<bs><esc>
+inoremap <c-k> <esc>^:s/\s*//<cr>i<bs>
 
 " moving lines up and down
 nnoremap <c-down> :m+<cr>==
@@ -43,16 +41,20 @@ inoremap <c-up> <esc>:m-2<cr>==gi
 vnoremap <c-down> :m'>+<cr>gv=gv
 vnoremap <c-up> :m-2<cr>gv=gv
 
-" resize window
+" window resizing
 nnoremap = 10<c-w>+
 nnoremap - 10<c-w>-
 nnoremap _ <c-w>_<esc>
 nnoremap + <c-w>=
 
+" window navigation
+nnoremap <c-h> <c-w><c-h>
+nnoremap <c-l> <c-w><c-l>
+
 " tag list
 nnoremap <c-p> :TlistToggle<cr>
 
-" scroll window
-nnoremap <c-j> 
-nnoremap <c-k> 
+" folding
+vnoremap f :fold<cr>
+vnoremap ff :foldopen<cr>
 
