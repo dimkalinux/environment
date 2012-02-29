@@ -57,7 +57,9 @@ endfunction
 if g:syntastic_python_checker == 'pylint'
     function! SyntaxCheckers_python_GetLocList()
         let makeprg = 'pylint -f parseable -r n -i y ' .
+            \ g:syntastic_python_checker_args.' '. 
             \ shellescape(expand('%')) .
+            \ ' 2> /dev/null ' . 
             \ ' \| sed ''s_: \[[RC]_: \[W_''' .
             \ ' \| sed ''s_: \[[F]_:\ \[E_'''
         let errorformat = '%f:%l: [%t%n] %m,%-GNo config%m'
