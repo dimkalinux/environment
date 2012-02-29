@@ -14,7 +14,7 @@ let g:CommandTCancelMap = "<esc>"
 let g:pydoc_wh = 26
 let g:pydoc_highlight = 0
 
-" syntastic
+" syntastic 
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_quiet_warnings = 0
 let g:syntastic_loc_list_height = 5
@@ -25,4 +25,5 @@ let g:syntastic_mode_map = {
     \ 'active_filetypes': ['php', 'python'],
     \ 'passive_filetypes': ['javascript', 'html'] 
     \ }
-
+let g:syntastic_python_checker = 'pylint'
+let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611'

@@ -363,7 +363,7 @@ endfunction
 "load one
 function! s:Checkable(ft)
     if !exists("g:loaded_" . a:ft . "_syntax_checker")
-        exec "runtime check/" . a:ft . ".vim"
+        exec "runtime syntax_checkers/" . a:ft . ".vim"
     endif
 
     return exists("*SyntaxCheckers_". a:ft ."_GetLocList")
@@ -426,7 +426,7 @@ endfunction
 "load the chosen checker for the current filetype - useful for filetypes like
 "javascript that have more than one syntax checker
 function! s:LoadChecker(checker)
-    exec "runtime check/" . &ft . "/" . a:checker . ".vim"
+    exec "runtime syntax_checkers/" . &ft . "/" . a:checker . ".vim"
 endfunction
 
 "return a string representing the state of buffer according to
