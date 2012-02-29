@@ -26,4 +26,4 @@ let g:syntastic_mode_map = {
     \ 'passive_filetypes': ['javascript', 'html'] 
     \ }
 let g:syntastic_python_checker = 'pylint'
-let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611'
+let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611 -d WO621'
