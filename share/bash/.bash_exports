@@ -1,7 +1,8 @@
 # environment
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
-export MANPATH=$HOME/man:$MANPATH
+export MANPATH=$HOME/man:/usr/local/man:$MANPATH
+export PYTHONPATH=$HOME/.pylocal:$PYTHONPATH
 
 # sphinx fix
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
