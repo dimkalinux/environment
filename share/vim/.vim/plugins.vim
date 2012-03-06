@@ -11,7 +11,7 @@ let g:CommandTMatchWindowReverse = 1
 let g:CommandTCancelMap = "<esc>"
 
 " pydoc
-let g:pydoc_wh = 26
+let g:pydoc_wh = 30
 let g:pydoc_highlight = 0
 
 " syntastic 
