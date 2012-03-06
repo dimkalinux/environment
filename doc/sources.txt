@@ -1,0 +1,6 @@
+http://artnez.com/8748a7430874e0000adca51210750696a1c310f3/ack-1.96.pl
+http://artnez.com/8748a7430874e0000adca51210750696a1c310f3/ctags-5.8.tar.gz
+http://artnez.com/8748a7430874e0000adca51210750696a1c310f3/most-5.0.0.tar.gz
+http://artnez.com/8748a7430874e0000adca51210750696a1c310f3/slang-2.2.4.tar.gz
+http://artnez.com/8748a7430874e0000adca51210750696a1c310f3/tree-1.6.0.tgz
+http://artnez.com/8748a7430874e0000adca51210750696a1c310f3/vim-7.3.tar.bz2:
