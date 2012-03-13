@@ -38,11 +38,17 @@ inoremap <c-up> <esc>:m-2<cr>==gi
 vnoremap <c-down> :m'>+<cr>gv=gv
 vnoremap <c-up> :m-2<cr>gv=gv
 
-" window resizing
-nnoremap = 10<c-w>+
-nnoremap - 10<c-w>-
-nnoremap _ <c-w>_<esc>
-nnoremap + <c-w>=
+" window resizing (height)
+nnoremap <down> 10<c-w>+
+nnoremap <up> 10<c-w>-
+nnoremap <c-down> <c-w>_
+nnoremap <c-up> <c-w>=
+
+" window resizing (width)
+nnoremap <left> <esc>:vertical resize -25<cr>
+nnoremap <right> <esc>:vertical resize +25<cr>
+nnoremap <c-left> <esc>:vertical resize -5<cr>
+nnoremap <c-right> <esc>:vertical resize +5<cr>
 
 " window navigation
 nnoremap <c-h> <c-w><c-h>
