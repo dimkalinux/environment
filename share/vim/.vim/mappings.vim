@@ -27,8 +27,8 @@ nnoremap <c-right> :BufSurfForward<cr>
 nmap <space> zz
 
 " smart delete to end of previous line 
-nnoremap <c-k> ^:s/\s*//<cr>i<bs><esc>
-inoremap <c-k> <esc>^:s/\s*//<cr>i<bs>
+nnoremap <c-k> :silent! s/^\s\+\*\/\?//<cr>^:s/\s*//<cr>i<bs> <esc>$
+inoremap <c-k> <esc>:silent! s/^\s\+\*\/\?//<cr>^:s/\s*//<cr>i<bs> <esc>$a
 
 " moving lines up and down
 nnoremap <c-down> :m+<cr>==
