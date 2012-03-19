@@ -4,7 +4,7 @@ let Tlist_Show_One_File = 1
 let Tlist_WinWidth = 50
 let Tlist_Close_On_Select = 1 
 let Tlist_GainFocus_On_ToggleOpen = 1
-let tlist_php_settings = "php;c:class;f:function"
+let tlist_php_settings = "php;i:interface;c:class;v:properties;f:function"
 
 " command-t
 let g:CommandTMatchWindowReverse = 1

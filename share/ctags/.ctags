@@ -10,11 +10,11 @@
 --exclude='*/data/*'
 --exclude='*/build/*'
 
---PHP-kinds=+cf
---regex-PHP=/abstract\s+class\s+([^ ]+)/\1/c/ 
---regex-PHP=/interface\s+([^ ]+)/\1/c/ 
---regex-PHP=/final\s+(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/
---regex-PHP=/const\s+([^ 	=]+)/\1/d/
+--regex-PHP
+--regex-PHP=/(^|^[^\/*]+[[:blank:]])(abstract[[:blank:]]+)?class[[:blank:]]+([^ ]+)/\3/c/
+--regex-PHP=/(^|^[^\/*]+[[:blank:]])(static|abstract|public|protected|private[[:blank:]]+)?(final[[:blank:]]+)?function[[:blank:]]+(\&[[:blank:]]+)?([^ (]+)/\5/f/
+--regex-PHP=/(^|^[^\/*]+[[:blank:]])interface[[:blank:]]+([^ ]+)/\2/i/
+--regex-PHP=/(^|^[^\/*]+[[:blank:]])(static[[:blank:]]+)?(var|public|protected|private)[[:blank:]]+(static[[:blank:]]+)?\$([[:alpha:]_][[:alnum:]_]*)[[:blank:]]*/\5/v/
+--PHP-kinds=cfiv
 
 --python-kinds=-i
-
