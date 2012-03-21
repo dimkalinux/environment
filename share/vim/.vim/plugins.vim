@@ -31,4 +31,4 @@ let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611 -d W0621 ' .
                                     \ '-d C0301 -d W0108 -d W0105 -d W0612 ' . 
                                     \ '-d W0232 -d W0603 -d R0913 -d R0922 ' . 
                                     \ '-d W0106 -d W0623 -d W0142 -d W0212 ' . 
-                                    \ '-d W0141 -d I'
+                                    \ '-d W0141 -d E1101 -d I'
