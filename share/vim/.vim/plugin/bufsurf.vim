@@ -15,7 +15,6 @@ function s:InitVariable(var, value)
 endfunction
 
 call s:InitVariable('g:BufSurfIgnore', '')
-call s:InitVariable('g:BufSurfMessages', 1)
 
 command BufSurfBack :call <SID>BufSurfBack(winnr())
 command BufSurfForward :call <SID>BufSurfForward(winnr())
@@ -39,8 +38,6 @@ function s:BufSurfBack(winnr)
         let s:disabled = 1
         execute "b " . s:window_history[a:winnr][s:window_history_index[a:winnr]]
         let s:disabled = 0
-    else
-        call s:BufSurfEcho("reached start of window navigation history")
     endif
 endfunction
 
@@ -51,8 +48,6 @@ function s:BufSurfForward(winnr)
         let s:disabled = 1
         execute "b " . s:window_history[a:winnr][s:window_history_index[a:winnr]]
         let s:disabled = 0
-    else
-        call s:BufSurfEcho("reached end of window navigation history")
     endif
 endfunction
 
@@ -108,22 +103,6 @@ function s:BufSurfIsDisabled(bufnr)
 
     return 0
 endfunction
-
-function s:BufSurfEcho(msg)
-    if g:BufSurfMessages == 1
-        echohl WarningMsg
-        echomsg 'BufSurf: ' . a:msg
-        echohl None
-    endif
-endfunction
-
-" In case Vim is started and files have been specified on the command line, no auto commands are triggered for it. Therefore, we loop over the list of
-" buffers once, and append them.
-let s:i = 1
-while bufexists(s:i)
-    call s:BufSurfAppend(s:i, winnr())
-    let s:i += 1
-endwhile
 
 " Setup the autocommands that handle MRU buffer ordering per window.
 augroup BufSurf
