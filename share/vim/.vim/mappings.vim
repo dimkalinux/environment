@@ -45,10 +45,8 @@ nnoremap <c-down> <c-w>_
 nnoremap <c-up> <c-w>=
 
 " window resizing (width)
-nnoremap <left> <esc>:vertical resize -25<cr>
-nnoremap <right> <esc>:vertical resize +25<cr>
-nnoremap <c-left> <esc>:vertical resize -5<cr>
-nnoremap <c-right> <esc>:vertical resize +5<cr>
+nnoremap <left> <esc>:vertical resize -15<cr>
+nnoremap <right> <esc>:vertical resize +15<cr>
 
 " window navigation
 nnoremap <c-h> <c-w><c-h>
