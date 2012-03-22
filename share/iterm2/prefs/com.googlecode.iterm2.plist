@@ -179,6 +179,13 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xd-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0xf700-0x300000</key>
 		<dict>
 			<key>Action</key>
@@ -348,7 +355,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>250 73 570 473 0 0 1680 1050 </string>
+	<string>0 0 1680 1050 0 0 1680 1028 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_8AEFC7AA-FB14-4EA0-AF67-0BE35FD469A4</key>
