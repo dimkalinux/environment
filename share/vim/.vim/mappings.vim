@@ -30,14 +30,6 @@ nmap <space> zz
 nnoremap <c-k> :silent! s/^\s\+\*\/\?//<cr>^:silent! s/\s*//<cr>i<bs><esc>$
 inoremap <c-k> <esc>:silent! s/^\s\+\*\/\?//<cr>^:silent! s/\s*//<cr>i<bs><esc>$a
 
-" moving lines up and down
-nnoremap <c-down> :m+<cr>==
-nnoremap <c-up> :m-2<cr>==
-inoremap <c-down> <esc>:m+<cr>==gi
-inoremap <c-up> <esc>:m-2<cr>==gi
-vnoremap <c-down> :m'>+<cr>gv=gv
-vnoremap <c-up> :m-2<cr>gv=gv
-
 " window resizing (height)
 nnoremap <down> 10<c-w>+
 nnoremap <up> 10<c-w>-
@@ -47,10 +39,6 @@ nnoremap <c-up> <c-w>=
 " window resizing (width)
 nnoremap <left> <esc>:vertical resize -15<cr>
 nnoremap <right> <esc>:vertical resize +15<cr>
-
-" window navigation
-nnoremap <c-h> <c-w><c-h>
-nnoremap <c-l> <c-w><c-l>
 
 " tag management
 nnoremap <c-p> :TlistToggle<cr>
