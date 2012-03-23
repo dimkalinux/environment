@@ -19,7 +19,7 @@ nnoremap <f2> :set spell! spell?<cr>
 inoremap <f2> <esc>:set spell! spell?<cr>
 
 " buffer management
-nnoremap <c-n> :Scratch<cr>
+nnoremap <c-n> <esc>:tabnew<cr>
 nnoremap <c-left> :BufSurfBack<cr>
 nnoremap <c-right> :BufSurfForward<cr>
 
