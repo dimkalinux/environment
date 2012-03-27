@@ -3,7 +3,7 @@ HISTORY=$(cat | grep -v -E "^[0-9[:space:]]*hist")
 LINE_COUNT=${2:-10}
 if [[ $1 =~ ^[0-9]+$ ]]; then
     LINE_COUNT=$1
-elif [ -n $1 ]; then
+elif [ -n "$1" ]; then
     HISTORY=$(echo "$HISTORY" | grep -E "$1")
 fi
 echo "$HISTORY" | tail -n $LINE_COUNT
