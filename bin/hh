@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-cat -n $HOME/.bash_history | \
+history | \
     grep -v -E "^[0-9[:space:]]*(\.\/)?(hist|hh)" | \
     grep -E "$1" | \
     tail -n ${2:-10}
