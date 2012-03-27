@@ -16,7 +16,7 @@ alias lt4="lt -L 4"
 alias lt5="lt -L 5"
 
 # command history
-alias hist="history"
+alias hist="history | filter-history"
 
 # archiving
 alias untar="tar -xvf"
