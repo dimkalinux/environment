@@ -2,8 +2,7 @@
 let mapleader=','
 
 " omnicompletion helpers
-inoremap <c-space> <c-x><c-o>
-imap <c-@> <c-space>
+inoremap <c-c> <c-x><c-o>
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif 
 
