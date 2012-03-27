@@ -46,7 +46,7 @@
 	<real>1.6354166269302368</real>
 	<key>GlobalKeyMap</key>
 	<dict>
-		<key>0x20-0x120000</key>
+		<key>0x20-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -2532,7 +2532,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-03-26T02:02:18Z</date>
+	<date>2012-03-27T02:02:17Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
