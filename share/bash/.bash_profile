@@ -17,3 +17,7 @@ done
 [ -e $HOME/.tagcomplete ] && source $HOME/.tagcomplete
 [ -e $HOME/.sshcomplete ] && source $HOME/.sshcomplete
 
+# Load OS X specifics
+if [ "$(uname)" == "Darwin" ]; then
+    source $HOME/.bash_darwin
+fi
