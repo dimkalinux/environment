@@ -30,8 +30,8 @@ nnoremap <c-k> :silent! s/^\s\+\*\/\?//<cr>^:silent! s/\s*//<cr>i<bs><esc>$
 inoremap <c-k> <esc>:silent! s/^\s\+\*\/\?//<cr>^:silent! s/\s*//<cr>i<bs><esc>$a
 
 " window resizing (height)
-nnoremap <down> 10<c-w>+
-nnoremap <up> 10<c-w>-
+nnoremap <down> 4<c-w>+
+nnoremap <up> 4<c-w>-
 nnoremap <c-down> <c-w>_
 nnoremap <c-up> <c-w>=
 
