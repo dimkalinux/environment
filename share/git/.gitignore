@@ -1,20 +1,20 @@
-# IDEs
+# ide
 .settings
 .buildpath
 .idea
 .localized
 
-# OSX
+# osx
 .DS_Store
 Icon
 .dropbox
 
-# VIM
+# vim
 *.swp
+*.vimsession
 
-# Python
+# python
 *.pyc
 
-# CTAGS
+# ctags
 tags
-
