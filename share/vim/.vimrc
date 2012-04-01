@@ -4,7 +4,7 @@ set nocompatible
 set history=50 
 set hidden
 set splitright
-set nosplitbelow
+set splitbelow 
 set nomodeline
 set clipboard=unnamed 
 set exrc
