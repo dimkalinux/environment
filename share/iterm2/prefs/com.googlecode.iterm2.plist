@@ -144,6 +144,13 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x7b-0xa0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>3</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x7d-0x60000</key>
 		<dict>
 			<key>Action</key>
@@ -151,14 +158,14 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x9-0x100000</key>
+		<key>0x7d-0xa0000</key>
 		<dict>
 			<key>Action</key>
-			<integer>22</integer>
+			<integer>1</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xd-0x100000</key>
+		<key>0x9-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -330,11 +337,11 @@
 		<string>@h</string>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>756 454 924 485 0 0 1680 1028 </string>
+	<string>756 453 924 485 0 0 1680 1028 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1050 0 0 1680 1028 </string>
+	<string>-1240 355 570 473 -1600 150 1600 900 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_8AEFC7AA-FB14-4EA0-AF67-0BE35FD469A4</key>
@@ -2532,7 +2539,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-03-27T02:02:17Z</date>
+	<date>2012-04-01T01:11:52Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
