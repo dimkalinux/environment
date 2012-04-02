@@ -14,6 +14,7 @@ set keywordprg=man
 " saving
 set autowrite
 set viminfo='10,<100,:0,%,n~/.viminfo
+set sessionoptions=blank,buffers,folds,resize,slash,tabpages,winpos,winsize
 
 " tabs
 set autoindent
