@@ -10,7 +10,3 @@ I need to be consistent across environments.
 `doc` documentation, notes, etc.
 
 `share` program configuration files, plugins, and resources.
-
-`src` source for commonly used programs. kept here to make setting up a portable
-environment easier if a package manager is unavailable.
-
