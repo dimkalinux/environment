@@ -1,6 +1,9 @@
 " set the leader key
 let mapleader=','
 
+" document handling
+nnoremap <c-s> <esc>:w<cr>
+
 " omnicompletion helpers
 inoremap <c-c> <c-x><c-o>
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
