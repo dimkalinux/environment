@@ -23,7 +23,7 @@ let g:syntastic_enable_signs = 0
 let g:syntastic_mode_map = { 
     \ 'mode': 'active',
     \ 'active_filetypes': ['php', 'python'],
-    \ 'passive_filetypes': ['javascript', 'html'] 
+    \ 'passive_filetypes': ['javascript', 'html', 'css'] 
     \ }
 let g:syntastic_python_checker = 'pylint'
 let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611 -d W0621 ' .
