@@ -10,7 +10,7 @@ Icon
 .dropbox
 
 # vim
-*.swp
+*.sw[po]
 *.vimsession
 
 # python
