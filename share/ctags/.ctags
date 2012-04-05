@@ -11,10 +11,10 @@
 --exclude='*/build/*'
 
 --regex-PHP
---regex-PHP=/(^|^[^\/*]+[[:space:]])(abstract[[:space:]]+)?class[[:space:]]+([^ ]+)/\3/c/
---regex-PHP=/(^|^[^\/*]+[[:space:]])(static|abstract|public|protected|private[[:space:]]+)?(final[[:space:]]+)?function[[:space:]]+(\&[[:space:]]+)?([^ (]+)/\5/f/
---regex-PHP=/(^|^[^\/*]+[[:space:]])interface[[:space:]]+([^ ]+)/\2/i/
---regex-PHP=/(^|^[^\/*]+[[:space:]])(static[[:space:]]+)?(var|public|protected|private)[[:space:]]+(static[[:space:]]+)?\$([[:alpha:]_][[:alnum:]_]*)[[:space:]]*/\5/v/
+--regex-PHP=/(^|^[^\/*]+)[[:space:]]*(abstract[[:space:]]+)?class[[:space:]]+([^ ]+)/\3/c/
+--regex-PHP=/(^|^[^\/*]+)[[:space:]]*(static|abstract|public|protected|private[[:space:]]+)?(final[[:space:]]+)?function[[:space:]]+(\&[[:space:]]+)?([^ (]+)/\5/f/
+--regex-PHP=/(^|^[^\/*]+)[[:space:]]*interface[[:space:]]+([^ ]+)/\2/i/
+--regex-PHP=/(^|^[^\/*]+)[[:space:]]*(static[[:space:]]+)?(var|public|protected|private)[[:space:]]+(static[[:space:]]+)?\$([[:alpha:]_][[:alnum:]_]*)[[:space:]]*/\5/v/
 --PHP-kinds=cfiv
 
 --python-kinds=-i
