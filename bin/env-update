@@ -29,14 +29,32 @@ fi
 
 # download new changes
 if [ $FLAGS_local == $FLAGS_FALSE ]; then
-    echo -n "download changes... "
-    error=$(git pull --quiet 2>&1 >/dev/null)
+    echo -n "fetching changes... "
+    error=$(git fetch --quiet 2>&1 >/dev/null)
     if [[ "$?" != "0" ]]; then 
         echo "failed!"
         echo -e "$error"
         exit 1
     fi
     echo "ok"
+
+    echo "showing changes..."
+    git log --oneline ..FETCH_HEAD
+
+    read -r -p "Are these changes ok? [Y/n] " response
+    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+        echo -n "merging changes... "
+        error=$(git merge --quiet FETCH_HEAD 2>&1 >/dev/null)
+        if [[ "$?" != "0" ]]; then 
+            echo "failed!"
+            echo -e "$error"
+            exit 1
+        fi
+        echo "ok"
+    else
+        echo "no problem. exiting."
+        exit 
+    fi
 fi
 
 # link dotfiles
