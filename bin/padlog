@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+logfile=$1
+numlines=${2:-4}
+
+if [ ! -f $logfile ]; then
+    echo "cannot read file: ${logfile}"
+    exit 1
+fi
+
+i=0
+while [ $i -lt $numlines ]; do
+    echo '' >> $logfile
+    i=$(($i+1))
+done
