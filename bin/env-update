@@ -44,7 +44,7 @@ if [ $FLAGS_local == $FLAGS_FALSE ]; then
     read -r -p "Are these changes ok? [Y/n] " response
     if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
         echo -n "merging changes... "
-        error=$(git merge --quiet FETCH_HEAD 2>&1 >/dev/null)
+        error=$(git merge --ff --quiet FETCH_HEAD 2>&1 >/dev/null)
         if [[ "$?" != "0" ]]; then 
             echo "failed!"
             echo -e "$error"
