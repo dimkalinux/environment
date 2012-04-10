@@ -22,8 +22,8 @@ inoremap <f2> <esc>:set spell! spell?<cr>
 
 " buffer management
 nnoremap <c-n> <esc>:tabnew<cr>
-nnoremap <c-left> :BufSurfBack<cr>
-nnoremap <c-right> :BufSurfForward<cr>
+nnoremap <c-left> gT<cr>
+nnoremap <c-right> gt<cr>
 
 " self explanatory
 nmap <space> zz
