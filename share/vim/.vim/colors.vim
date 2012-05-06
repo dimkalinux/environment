@@ -10,4 +10,3 @@ hi Pmenu ctermfg=white ctermbg=black
 
 " match parens - defaults confuse me
 hi MatchParen cterm=bold ctermbg=none ctermfg=white
-
