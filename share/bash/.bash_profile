@@ -14,7 +14,6 @@ done
 
 # Load plugins
 [ -e $HOME/.gitcomplete ] && source $HOME/.gitcomplete
-[ -e $HOME/.tagcomplete ] && source $HOME/.tagcomplete
 [ -e $HOME/.sshcomplete ] && source $HOME/.sshcomplete
 
 # Load OS X specifics
