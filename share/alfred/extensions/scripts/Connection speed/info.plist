@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>action</key>
+	<false/>
+	<key>category</key>
+	<string>SCRIPTS</string>
+	<key>command</key>
+	<string># VARIABLES
+TEMPFILE=tempfile
+curl -A "Mozilla/5.0 Littlebighuman.com/edpspeedtest.sh 1.0" -s "http://speedtest.edpnet.be/speedtest4.php" -o TEMPFILE
+
+# Get the line with the data we need
+DATALINE=$(cat "$TEMPFILE" | awk '/Your result is/')
+
+# Remove TEMPFILE
+rm TEMPFILE
+
+SPEED=$(echo $DATALINE | awk '{print $5}' | sed 's/\./\,/g')
+echo "$SPEED Kbytes/s"                          </string>
+	<key>escapequery</key>
+	<true/>
+	<key>escapequerybackquotes</key>
+	<true/>
+	<key>escapequerybrackets</key>
+	<true/>
+	<key>escapequeryquotes</key>
+	<true/>
+	<key>escapequerysemicolons</key>
+	<true/>
+	<key>growloutput</key>
+	<true/>
+	<key>growloutputsticky</key>
+	<false/>
+	<key>keyword</key>
+	<string>speed</string>
+	<key>logging</key>
+	<false/>
+	<key>silent</key>
+	<true/>
+	<key>subtitle</key>
+	<string>Test the connection speed</string>
+	<key>title</key>
+	<string>Connection speed</string>
+</dict>
+</plist>
