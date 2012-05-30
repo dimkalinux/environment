@@ -2,7 +2,7 @@
 let mapleader=','
 
 " document handling
-nnoremap <c-s> <esc>:wa<cr>
+nnoremap <c-s> <esc>:w<cr>
 
 " omnicompletion helpers
 inoremap <c-c> <c-x><c-o>
