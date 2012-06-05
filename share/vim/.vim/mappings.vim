@@ -39,8 +39,8 @@ nnoremap <c-down> <c-w>_
 nnoremap <c-up> <c-w>=
 
 " window resizing (width)
-nnoremap <left> <esc>:vertical resize -15<cr>
-nnoremap <right> <esc>:vertical resize +15<cr>
+nnoremap <left> <esc>:vertical resize -10<cr>
+nnoremap <right> <esc>:vertical resize +10<cr>
 
 " tag management
 nnoremap <c-p> :TlistToggle<cr>
