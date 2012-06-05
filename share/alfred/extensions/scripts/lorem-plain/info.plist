@@ -7,7 +7,8 @@
 	<key>category</key>
 	<string>SCRIPTS</string>
 	<key>command</key>
-	<string>php -f lorem.php -- "{query}" | pbcopy
+	<string>source $HOME/.bash_profile
+lorem-ipsum-generator -p {query} | pbcopy
 echo "Copied {query} plain text lorem paragraphs to clipboard."</string>
 	<key>disabled</key>
 	<false/>
@@ -30,7 +31,7 @@ echo "Copied {query} plain text lorem paragraphs to clipboard."</string>
 	<key>logging</key>
 	<false/>
 	<key>parameter</key>
-	<integer>0</integer>
+	<integer>3</integer>
 	<key>silent</key>
 	<true/>
 	<key>subtitle</key>

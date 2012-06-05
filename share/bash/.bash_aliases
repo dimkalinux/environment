@@ -51,3 +51,6 @@ alias utime="date '+%s'"
 
 # command wrappers
 alias less='less -R'
+
+# lorem ipsum
+alias ipsum='lorem-ipsum-generator'
