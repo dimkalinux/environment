@@ -10,6 +10,9 @@ set clipboard=unnamed
 set exrc
 set secure
 set keywordprg=man
+set noerrorbells 
+set visualbell 
+set t_vb=
 
 " saving
 set autowrite
