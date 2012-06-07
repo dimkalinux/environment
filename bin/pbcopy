@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+if [ "$(uname)" == "Darwin" ]; then
+    /usr/bin/pbcopy $@
+else
+    cat | nc localhost 2224
+fi

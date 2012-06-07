@@ -1,4 +1,19 @@
 #! /usr/bin/env bash
+# 
+# Darwin (OSX) specific configuration.
+
+# determine the current environment directory
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+ENVDIR="$( cd -P "$( dirname "$SOURCE" )"/../../ && pwd )"
+cd $ENVDIR
 
 # enables <c-s> input
 stty -ixon
+
+# forward all ssh connections back to pbcopy
+alias ssh='ssh -R2224:localhost:2224'
+
+# make sure pbcopy service is running
+launchctl list localhost.pbcopy &> /dev/null || \
+    launchctl load $ENVDIR/share/iterm2/pbcopy/pbcopy.plist
