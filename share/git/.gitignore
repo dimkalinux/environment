@@ -13,6 +13,7 @@ Icon
 *.sw[po]
 *.vimsession
 .sessions
+.vimrc
 
 # python
 *.pyc
