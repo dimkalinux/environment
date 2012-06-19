@@ -45,6 +45,7 @@ nnoremap <right> <esc>:vertical resize +10<cr>
 " tag management
 nnoremap <c-p> :TlistToggle<cr>
 nnoremap <c-\> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
+nnoremap <c-t> <c-w><c-]><c-w>T
 
 " folding
 vnoremap f :fold<cr>
