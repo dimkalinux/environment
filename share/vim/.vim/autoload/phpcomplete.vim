@@ -1096,6 +1096,7 @@ let g:php_keywords = {
 \ 'LOG_NDELAY': '',
 \ 'LOG_NOWAIT': '',
 \ 'LOG_PERROR': '',
+\ 'FILE_APPEND': '',
 \ }
 " }}}
 " PHP builtin functions {{{
