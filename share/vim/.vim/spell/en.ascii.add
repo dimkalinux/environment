@@ -44,3 +44,11 @@ param
 Refactored
 assetic
 Refactor
+SQLite
+CLI
+WSGI
+VirtualHost
+WSGIProcessGroup
+WSGIApplicationGroup
+WSGIDaemonProcess
+WSGIScriptAlias
