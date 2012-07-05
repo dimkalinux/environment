@@ -1,2 +1,5 @@
-sudo ./configure --enable-pythoninterp --enable-python3interp --enable-rubyinterp --enable-multibyte
-
+./configure \
+    --with-features=big \
+    --enable-pythoninterp \
+    --enable-rubyinterp \
+    --enable-multibyte
