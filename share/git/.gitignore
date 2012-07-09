@@ -23,3 +23,6 @@ tags
 
 # nfs
 .nfs*
+
+# sass
+.sass-cache
