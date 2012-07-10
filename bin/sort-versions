@@ -4,7 +4,7 @@ import sys
 import re
 
 def split_version(s):
-    sequences = re.sub(r'[^0-9\-\.]', '', s).strip('-.').split('.')
+    sequences = re.sub(r'[^0-9\-\.]', '', s).strip('-.').replace('-', '.').split('.')
     sequences = filter(None, sequences)
     return map(int, sequences)
 
