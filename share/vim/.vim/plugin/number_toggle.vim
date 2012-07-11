@@ -61,5 +61,5 @@ autocmd FocusGained * :call FocusGained()
 
 " Switch to absolute line numbers when entering insert mode and switch back to
 " relative line numbers when switching back to normal mode.
-autocmd InsertEnter * :call InsertEnter()
-autocmd InsertLeave * :call InsertLeave()
+"autocmd InsertEnter * :call InsertEnter()
+"autocmd InsertLeave * :call InsertLeave()
