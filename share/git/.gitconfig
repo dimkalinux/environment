@@ -17,3 +17,4 @@
     info = !git branch && echo && git status && echo && git log -n2
     tags = "!git tag | sort-versions"
     msg = "!git log -n1 --format='%B' | php -r 'echo trim(file_get_contents(\"php://stdin\")) . \"\\n\";'"
+    record = "!git add -p && git commit -v $@"
