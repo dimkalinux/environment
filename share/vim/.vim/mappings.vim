@@ -31,8 +31,7 @@ nnoremap ( gT<cr>
 nmap <space> zz
 
 " smart delete to end of previous line 
-nnoremap <c-k> :silent! s/^\s\+\*\/\?//<cr>^:silent! s/\s*//<cr>i<bs><esc>$
-inoremap <c-k> <esc>:silent! s/^\s\+\*\/\?//<cr>^:silent! s/\s*//<cr>i<bs><esc>$a
+nnoremap <c-k> :silent! s/^\s\+\*\/\?//<cr>k:silent! s/\s*$//<cr>j^:silent! s/\s*//<cr>i<bs> <esc>$
 
 " window resizing (height)
 nnoremap <down> 4<c-w>+
