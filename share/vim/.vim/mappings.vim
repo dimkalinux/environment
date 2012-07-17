@@ -24,6 +24,8 @@ inoremap <f2> <esc>:set spell! spell?<cr>
 nnoremap <c-n> <esc>:tabnew<cr>
 nnoremap <c-left> gT<cr>
 nnoremap <c-right> gt<cr>
+nnoremap ) gt<cr>
+nnoremap ( gT<cr>
 
 " self explanatory
 nmap <space> zz
@@ -50,4 +52,3 @@ nnoremap <c-t> <c-w><c-]><c-w>T
 " folding
 vnoremap f :fold<cr>
 vnoremap ff :foldopen<cr>
-
