@@ -33,3 +33,6 @@ let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611 -d W0621 ' .
                                     \ '-d W0106 -d W0623 -d W0142 -d W0212 ' . 
                                     \ '-d W0141 -d E1101 -d C0102 -d R0923 ' . 
                                     \ '-d W0613 -d W0406 -d R0914 -d I'
+
+" vimdoc
+let g:viewdoc_open='topleft new'
