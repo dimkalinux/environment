@@ -8,3 +8,4 @@
 --type-add=js=.coffee
 --type-set=coffee=.coffee
 --type-set=phtml=.phtml
+--type-set=ini=.ini
