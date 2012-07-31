@@ -38,3 +38,6 @@ let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611 -d W0621 ' .
 let g:snipMate = {}                                                                          
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
+
+" supertab
+let g:SuperTabDefaultCompletionType = '<c-n>'
