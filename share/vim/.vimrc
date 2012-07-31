@@ -15,6 +15,7 @@ set visualbell
 set t_vb=
 
 " saving
+set autoread
 set autowrite
 set viminfo='10,<100,:0,%,n~/.viminfo
 set sessionoptions=blank,buffers,folds,resize,slash,tabpages,winpos,winsize
@@ -34,6 +35,7 @@ set showcmd
 set showmatch
 set number
 set colorcolumn=81
+set cursorline
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set laststatus=2
 set nohlsearch
@@ -69,4 +71,3 @@ source $HOME/.vim/mappings.vim
 if filereadable(expand("~/.vimlocal"))
   source $HOME/.vimlocal
 endif
-

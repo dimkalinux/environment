@@ -5,6 +5,9 @@ colorscheme default
 " 80 column margin color
 hi ColorColumn ctermbg=black
 
+" highlight current line
+hi CursorLine ctermbg=black cterm=none
+
 " autocomplete/omnicomplete menu
 hi Pmenu ctermfg=white ctermbg=black
 
