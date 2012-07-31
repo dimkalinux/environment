@@ -116,8 +116,8 @@ chflags nohidden ~/Library
 # Disable local Time Machine backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
-# Kill affected applications
-for app in Safari Finder Dock; do killall "$app"; done
-
 # Faster animations
 defaults write com.apple.dock expose-animation-duration -float 0.15
+
+# Kill affected applications
+for app in Safari Finder Dock; do killall "$app"; done
