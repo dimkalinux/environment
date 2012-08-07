@@ -9,11 +9,14 @@ alias ....="cd ../../.."
 # listing directory contents
 alias ll="ls -hlF"
 alias la="ls -halF"
-alias lt="tree -F --dirsfirst -I \"*.pyc\""
+alias lt="tree -C -F --dirsfirst -I \"*.pyc\""
 alias lt2="lt -L 2"
 alias lt3="lt -L 3"
 alias lt4="lt -L 4"
 alias lt5="lt -L 5"
+
+# grep
+alias cgrep="grep --color"
 
 # command history
 alias hist="history | filter-history"
