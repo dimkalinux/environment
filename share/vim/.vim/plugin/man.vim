@@ -92,12 +92,13 @@ endfunc
 
 func <SID>GetPage(...)
   let mancmd = &keywordprg
-
   if a:0 >= 2
     let sect = a:1
     let page = a:2
   elseif a:0 >= 1
-    let sect = ""
+  echo &filetype
+  sleep 2
+    let sect = &filetype == 'c' ? '3' : ''
     let page = a:1
   else
     return
