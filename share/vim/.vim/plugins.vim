@@ -22,7 +22,7 @@ let g:syntastic_phpcs_disable = 1
 let g:syntastic_enable_signs = 0
 let g:syntastic_mode_map = { 
     \ 'mode': 'active',
-    \ 'active_filetypes': ['php', 'python'],
+    \ 'active_filetypes': ['json', 'php', 'python'],
     \ 'passive_filetypes': ['javascript', 'html', 'css'] 
     \ }
 let g:syntastic_python_checker = 'pylint'
