@@ -41,3 +41,6 @@ let g:snipMate.scope_aliases['php'] = 'php'
 
 " supertab
 let g:SuperTabDefaultCompletionType = '<c-n>'
+
+" ack plugin
+let g:ackprg="acklocal -H --nocolor --nogroup --column"
