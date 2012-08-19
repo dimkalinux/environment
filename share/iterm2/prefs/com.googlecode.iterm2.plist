@@ -337,11 +337,11 @@
 		<string>@h</string>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>534 433 924 485 0 0 1680 1028 </string>
+	<string>534 433 924 485 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 10 955 1012 0 0 1680 1028 </string>
+	<string>754 180 570 451 0 0 1680 1050 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_8AEFC7AA-FB14-4EA0-AF67-0BE35FD469A4</key>
@@ -1029,7 +1029,7 @@
 				</dict>
 			</array>
 			<key>Space</key>
-			<integer>1</integer>
+			<integer>-1</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -3244,7 +3244,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-07-30T00:59:25Z</date>
+	<date>2012-08-17T19:01:32Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
