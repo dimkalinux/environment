@@ -14,5 +14,4 @@ while [ True ]; do
     FILES="${FILES} ${FILE}"
 done
 
-sh -c "< /dev/tty vim ${FILES}"
- 
+sh -c "< /dev/tty vim $@ ${FILES}"
