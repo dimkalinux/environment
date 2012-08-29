@@ -16,3 +16,7 @@ alias ssh='ssh -R2224:localhost:2224'
 # make sure pbcopy service is running
 launchctl list localhost.pbcopy &> /dev/null || \
     launchctl load $ENVDIR/share/iterm2/pbcopy/pbcopy.plist
+
+# configure faketime
+export DYLD_FORCE_FLAT_NAMESPACE=1
+export DYLD_INSERT_LIBRARIES=/usr/local/lib/libfaketime.dylib.1
