@@ -42,5 +42,11 @@ let g:snipMate.scope_aliases['php'] = 'php'
 " supertab
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
-" ack plugin
-let g:ackprg="acklocal -H --nocolor --nogroup --column"
+" vdebug
+let g:vdebug_keymap = {}
+let g:vdebug_keymap['set_breakpoint'] = '<Leader>y'
+let g:vdebug_keymap['step_over'] = '<Leader>p'
+let g:vdebug_keymap['step_in'] = '<Leader>i'
+let g:vdebug_keymap['step_out'] = '<Leader>o'
+let g:vdebug_keymap['run'] = '<Leader>q'
+let g:vdebug_keymap['close'] = '<Leader>w'
