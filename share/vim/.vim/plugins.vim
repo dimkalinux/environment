@@ -54,3 +54,4 @@ let g:vdebug_keymap['close'] = '<Leader>w'
 
 let g:vdebug_options = {}
 let g:vdebug_options['timeout'] = 30
+let g:vdebug_options['ide_key'] = 'artem'
