@@ -53,4 +53,4 @@ let g:vdebug_keymap['run'] = '<Leader>q'
 let g:vdebug_keymap['close'] = '<Leader>w'
 
 let g:vdebug_options = {}
-let g:vdebug_options['timeout'] = 8
+let g:vdebug_options['timeout'] = 30
