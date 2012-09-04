@@ -9,7 +9,7 @@ alias ....="cd ../../.."
 # listing directory contents
 alias ll="ls -hlF"
 alias la="ls -halF"
-alias lt="tree -C -F --dirsfirst -I \"*.pyc\""
+alias lt="tree -C -F --dirsfirst --charset=ascii -I \"*.pyc\""
 alias lt2="lt -L 2"
 alias lt3="lt -L 3"
 alias lt4="lt -L 4"
