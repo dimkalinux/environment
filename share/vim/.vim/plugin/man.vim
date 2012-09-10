@@ -184,7 +184,7 @@ funct <SID>SetPrg()
     if curfiletype == "man"
         return 0
     endif
-    if curfiletype == "php"
+    if curfiletype == "php" || curfiletype == "phtml"
         set keywordprg=pman
     elseif curfiletype == "javascript"
         set keywordprg=jsman
