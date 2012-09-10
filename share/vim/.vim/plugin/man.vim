@@ -97,8 +97,6 @@ func <SID>GetPage(...)
     let sect = a:1
     let page = a:2
   elseif a:0 >= 1
-  echo &filetype
-  sleep 2
     let sect = &filetype == 'c' ? '3' : ''
     let page = a:1
   else
