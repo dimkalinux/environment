@@ -33,6 +33,7 @@ endif
 
 if exists(":Man") != 2
   com -nargs=+ Man call s:GetPage(<f-args>)
+  com -nargs=+ M call s:GetPage(<f-args>)
   nmap <s-k> :call <SID>PreGetPage(0)<CR>
 endif
 
