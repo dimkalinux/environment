@@ -33,12 +33,12 @@ set ruler
 set nowrap
 set showcmd
 set showmatch
-set number
 set colorcolumn=81
 set cursorline
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set laststatus=2
 set nohlsearch
+set relativenumber
 
 " movement
 set whichwrap+=<,>,[,],h,l
