@@ -1165,7 +1165,7 @@ let s:zen_settings = {
 \                    ."</head>\n"
 \                    ."<body>\n\t${child}|\n</body>\n"
 \                    ."</html>",
-\            'html:5': "<!DOCTYPE HTML>\n"
+\            'html:5': "<!DOCTYPE html>\n"
 \                    ."<html lang=\"${lang}\">\n"
 \                    ."<head>\n"
 \                    ."    <meta charset=\"${charset}\">\n"
