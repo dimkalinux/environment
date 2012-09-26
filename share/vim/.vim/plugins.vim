@@ -57,4 +57,4 @@ let g:vdebug_options['timeout'] = 30
 let g:vdebug_options['ide_key'] = 'artem'
 
 " zencoding
-let g:user_zen_expandabbr_key = '<c-y>'
+let g:user_zen_expandabbr_key = '<c-h>'
