@@ -181,7 +181,7 @@ endfunc
 
 funct <SID>SetPrg()
     let curfiletype = &filetype
-    if curfiletype == "man"
+    if curfiletype == ""
         return 0
     endif
     if curfiletype == "php" || curfiletype == "phtml"
