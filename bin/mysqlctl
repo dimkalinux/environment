@@ -1,0 +1,39 @@
+#! /usr/bin/env bash
+# 
+# Simple script to control a local MySQL process. Don't use in production.
+#
+# Author: Artem Nezvigin <artem@artnez.com>
+
+function mysql_start() {
+    echo "Starting MySQL..."
+    mysqld_safe --defaults-file=$HOME/etc/mysql.cnf &
+}
+
+function mysql_stop() {
+    echo "Stopping MySQL process $1..."
+    kill $1
+}
+
+MYSQL_PID=$(pgrep mysqld)
+case $1 in
+    start)
+        if [ $MYSQL_PID ]; then
+            echo "MySQL is already running."
+            exit
+        fi
+        mysql_start
+        ;;
+    stop)
+        if [ ! $MYSQL_PID ]; then
+            echo "MySQL is not running."
+            exit
+        fi
+        mysql_stop $MYSQL_PID
+        ;;
+    restart)
+        if [ $MYSQL_PID ]; then
+            mysql_stop $MYSQL_PID
+        fi
+        mysql_start
+        ;;
+esac
