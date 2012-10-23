@@ -49,3 +49,7 @@ alias ack='acklocal'
 
 # lorem ipsum
 alias ipsum='lorem-ipsum-generator'
+
+# php stuff
+alias php-opcode='php -dvld.active=1'
+alias php-debug='php -dxdebug.idekey=artem'
