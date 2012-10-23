@@ -1,5 +1,5 @@
 # environment
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/sbin:/usr/local/bin:$PATH
 export EDITOR=vim
 export MANPATH=$HOME/man:/usr/local/man:$MANPATH
 export PYTHONPATH=$HOME/.pylocal:$PYTHONPATH
