@@ -1,9 +1,9 @@
+CC=gcc \
 ./configure \
 --prefix=$HOME/php \
---disable-debug \
---enable-inline-optimization \
 --enable-mbstring \
 --enable-shared=all \
+--with-iconv-dir=/usr \
 --enable-intl \
 --enable-pcntl \
 --enable-soap \
@@ -13,7 +13,6 @@
 --with-curl \
 --with-gd \
 --with-openssl=/usr \
---with-iconv \
 --with-libedit \
 --with-pdo-mysql=mysqlnd \
 --with-apxs2=$HOME/apache/bin/apxs \

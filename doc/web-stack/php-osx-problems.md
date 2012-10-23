@@ -22,3 +22,10 @@ work, the following URLs contain more discussion:
   * https://bugs.php.net/bug.php?id=48795
   * http://wiki.apache.org/couchdb/Installing_on_OSX
 
+OS X 10.8
+---------
+
+The above problems shouldn't be an issue for Mountain Lion, but there are some 
+new ones to deal with. First, ensure that GCC is used to compile PHP as OS X 10.8
+will use llvm by default. Second, refrain from compiling a custom build of iconv
+because PHP will unsuccessfully try to use it.
