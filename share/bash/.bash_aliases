@@ -5,6 +5,7 @@ alias sudo="sudo "
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # listing directory contents
 alias ll="ls -hlF"
