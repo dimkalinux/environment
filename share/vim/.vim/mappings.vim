@@ -54,3 +54,6 @@ nnoremap <c-t> <c-w><c-]><c-w>T
 " folding
 vnoremap f :fold<cr>
 vnoremap ff :foldopen<cr>
+
+" toggle paste mode
+nnoremap <leader>p :set paste!<bar>:set paste?<cr>
