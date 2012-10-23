@@ -4,9 +4,6 @@ export EDITOR=vim
 export MANPATH=$HOME/man:/usr/local/man:$MANPATH
 export PYTHONPATH=$HOME/.pylocal:$PYTHONPATH
 
-# sphinx fix
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
 # enable terminal colors
 export CLICOLOR=1
 
@@ -14,5 +11,5 @@ export CLICOLOR=1
 export DARCS_ALWAYS_COLOR=1
 export DARCS_DO_COLOR_LINES=1
 
-# grep 
+# use green for grep color
 export GREP_COLOR='1;32'

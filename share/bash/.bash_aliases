@@ -22,22 +22,12 @@ alias cgrep="grep --color"
 # command history
 alias hist="history | filter-history"
 
-# archiving
-alias untar="tar -xvf"
-
-# google chrome
-alias chrome="open /Applications/Google\ Chrome.app"
-
 # ip address
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # flush dns acache
 alias flushdns="dscacheutil -flushcache"
-
-# view http traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|(GET|POST|PUT|DELETE|OPTIONS|HEAD|TRACE|CONNECT|PATCH) \/.*\""
 
 # trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
