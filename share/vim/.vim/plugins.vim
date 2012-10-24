@@ -22,8 +22,8 @@ let g:syntastic_phpcs_disable = 1
 let g:syntastic_enable_signs = 0
 let g:syntastic_mode_map = { 
     \ 'mode': 'active',
-    \ 'active_filetypes': ['json', 'php', 'python'],
-    \ 'passive_filetypes': ['javascript', 'html', 'css'] 
+    \ 'active_filetypes': ['json', 'javascript', 'php', 'python', 'css'],
+    \ 'passive_filetypes': ['html'] 
     \ }
 let g:syntastic_python_checker = 'pylint'
 let g:syntastic_python_checker_args = '-d C0103 -d C0111 -d W0611 -d W0621 ' .
