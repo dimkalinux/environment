@@ -3,5 +3,5 @@
     --with-features=big \
     --enable-pythoninterp \
     --enable-rubyinterp \
-    --with-ruby-command=/home/artem/bin/ruby-1.9 \
+    --with-ruby-command=/home/artem/.rvm/bin/ruby-1.9 \
     --enable-multibyte
