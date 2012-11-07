@@ -52,3 +52,10 @@ WSGIProcessGroup
 WSGIApplicationGroup
 WSGIDaemonProcess
 WSGIScriptAlias
+subdomain
+Filesystem
+stderr
+whitelist
+truthy
+namespace
+Harcode
