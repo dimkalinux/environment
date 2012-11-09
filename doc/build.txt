@@ -1,0 +1,32 @@
+Languages
+---------
+nodejs + npm (colors, csslint, jsonlint, less, nomnom, npm, uglify-js)
+php + pear (pman, htmlpurifier, php_cs, phpunit, zend_framework, xhprof, vld, xdebug)
+python + pip (lorem-ipsum-generator, pylint)
+
+Libraries
+---------
+faketime
+freetype
+icu
+libevent
+libjpeg
+libmcrypt
+libpng
+libtool
+pcre
+
+Programs
+--------
+apache
+autoconf
+automake
+cmake
+cmake
+ctags
+gdb
+imagick
+memcached
+sqlite
+vim
+watch
