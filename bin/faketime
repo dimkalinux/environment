@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+FAKETIME=$1; shift
+COMMAND=$(echo DYLD_FORCE_FLAT_NAMESPACE=1 DYLD_INSERT_LIBRARIES=$HOME/lib/faketime/libfaketime.dylib.1 FAKETIME="'$FAKETIME'" $@)
+sh -c "$COMMAND"
