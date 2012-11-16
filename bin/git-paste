@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+COMMIT1=${1:-'HEAD'}
+COMMIT2=${2:-$COMMIT1}
+DIFF=$(git diff --no-color $COMMIT1^..$COMMIT2)
+URL=$(echo -e "$DIFF" | arc paste | grep -o -E "(http:\/\/.*)")
+echo $URL | tr -d '\n' | pbcopy
+echo $URL
