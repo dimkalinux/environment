@@ -1,12 +1,24 @@
-" Rename.vim  -  Rename a buffer within Vim and on the disk
-"
-" Copyright June 2007-2011 by Christian J. Robinson <heptite@gmail.com>
-"
-" Distributed under the terms of the Vim license.  See ":help license".
+" Rename.vim - Rename a buffer within Vim and on the disk.
 "
 " Usage:
+" 
+"   :Rename[!] {newname}
 "
-" :Rename[!] {newname}
+" Changelog:
+"
+"   16 NOV 2012
+"   ===========
+"
+"   - Add support for local filepaths. If the filepath is /foo/bar/baz, calling 
+"     `Rename qux` will rename the file to /foo/bar/qux. Calling `Rename ../hey` 
+"     will rename the file to /foo/hey.
+"
+" Copyright:
+"
+"   Copyright June 2007-2011 by Christian J. Robinson <heptite@gmail.com>
+"   Distributed under the terms of the Vim license.  See ":help license".
+"
+"   Some additions by Artem Nezvigin <artem@artnez.com>
 
 command! -nargs=* -complete=file -bang Rename call Rename(<q-args>, '<bang>')
 
@@ -17,6 +29,17 @@ function! Rename(name, bang)
     if match(l:name, '/') != 0 && match(l:name, './') != 0
         let l:basepath = fnamemodify(l:oldfile, ':h')
         let l:name = expand(l:basepath . '/' . l:name, '%:p')
+    endif
+
+    if bufexists(fnamemodify(l:name, ':p'))
+        if (a:bang ==# '!')
+            silent exe bufnr(fnamemodify(l:name, ':p')) . 'bwipe!'
+        else
+            echohl ErrorMsg
+            echomsg 'A buffer with that name already exists (use ! to override).'
+            echohl None
+            return 0
+        endif
     endif
 
     let l:status = 1
