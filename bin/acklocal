@@ -1,6 +1,15 @@
 #! /usr/bin/env bash
 ackrc=""
 if [ -f ./.ackrc ]; then
-    ackrc=$(tr '\n' ' ' < ./.ackrc)
+ackrc=$(python <<INPUT
+args=[['']]
+with open('./.ackrc') as f:
+    for line in f.readlines():
+        line = line.strip()
+        [args.append(['']) if line == '' else args[-1].append(line)]
+print(' '.join([''.join(line) for line in args]))
+INPUT)
 fi
-ack $ackrc $@
+
+cmd="ack $ackrc $@"
+eval $cmd
