@@ -22,11 +22,24 @@
 
 command! -nargs=* -complete=file -bang Rename call Rename(<q-args>, '<bang>')
 
+autocmd BufWritePre * call CreateParentPath(expand('%:p'))
+
+function! s:createParentPath(filepath)
+    if filereadable(a:filepath)
+        return
+    endif
+    let dirname = '/' . join(split(a:filepath, '/')[0:-2], '/')
+    if isdirectory(expand(l:dirname))
+        return
+    endif
+    call mkdir(l:dirname, 'p')
+endfunction
+
 function! Rename(name, bang)
     let l:name    = a:name
     let l:oldfile = expand('%:p')
 
-    if match(l:name, '/') != 0 && match(l:name, './') != 0
+    if match(l:name, '/') != 0 && match(l:name, '\./') != 0
         let l:basepath = fnamemodify(l:oldfile, ':h')
         let l:name = expand(l:basepath . '/' . l:name, '%:p')
     endif
@@ -45,6 +58,8 @@ function! Rename(name, bang)
     let l:status = 1
 
     let v:errmsg = ''
+
+    call s:createParentPath(l:name)
     silent! exe 'saveas' . a:bang . ' ' . l:name
 
     if v:errmsg =~# '^$\|^E329'
