@@ -11,5 +11,14 @@ print(' '.join([''.join(line) for line in args]))
 INPUT)
 fi
 
-cmd="ack $ackrc $@"
+args=''
+for arg in "$@"; do
+    if [[ $arg =~ [[:space:]] ]]; then
+        args="$args '$arg'"
+    else
+        args="$args $arg"
+    fi
+done
+
+cmd="ack $ackrc $args"
 eval $cmd
