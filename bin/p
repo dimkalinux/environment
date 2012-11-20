@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+URL=$(arc paste | grep -o -E "(http:\/\/.*)")
+echo $URL | tr -d '\n' | pbcopy
+echo $URL
