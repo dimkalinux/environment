@@ -1,0 +1,35 @@
+var SKIP_MESSAGES = [
+  /^Expected an identifier and instead saw '.*' \(a reserved word\)\.$/,
+  /^Function declarations should not be placed in blocks\. Use a function expression or move the statement to the top of the outer function\.$/,
+  /^Use '===' to compare with/,
+  /^Use '!==' to compare with/,
+  /is better written in dot notation\.$/,
+  /^Unescaped '-'\.$/,
+  /^Bad line breaking before/,
+  /^Expected an assignment or function call and instead saw an expression\.$/
+];
+
+module.exports = {
+  reporter: function (res) {
+    var len = res.length;
+    var str = "";
+    var self = this;
+
+    res.forEach(function (r) {
+      var file = r.file;
+      var err = r.error;
+
+      for (i in SKIP_MESSAGES) {
+        if (SKIP_MESSAGES[i].test(err.reason)) return;
+      }
+
+      str += file + ": line " + err.line + ", col " +
+      err.character + ", " + err.reason + "\n";
+    });
+
+    if (str) {
+      process.stdout.write(str + "\n" + len + " error" +
+        ((len === 1) ? "" : "s") + "\n");
+    }
+  }
+};
