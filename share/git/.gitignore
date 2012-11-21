@@ -30,3 +30,6 @@ tags
 # jshint
 .jshintrc
 .jshintreporter
+
+# ack
+.ackrc
