@@ -51,7 +51,7 @@ alias ipsum='lorem-ipsum-generator'
 
 # php stuff
 alias php-opcode='php -dvld.active=1'
-alias php-debug='php -dxdebug.idekey=artem'
+alias php-debug='php -dxdebug.idekey=artem -dxdebug.remote_autostart=1'
 
 # project tools
 alias watch-project="watch -c tree --dirsfirst -C --charset=ascii -I '*.pyc'"
