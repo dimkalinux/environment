@@ -26,3 +26,7 @@ tags
 
 # sass
 .sass-cache
+
+# jshint
+.jshintrc
+.jshintreporter
