@@ -16,8 +16,9 @@ alias lt3="lt -L 3"
 alias lt4="lt -L 4"
 alias lt5="lt -L 5"
 
-# grep
+# grep/ack
 alias cgrep="grep --color"
+alias wack="ack --known-types"
 
 # command history
 alias hist="history | filter-history"
