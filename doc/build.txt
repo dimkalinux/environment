@@ -15,6 +15,7 @@ libmcrypt
 libpng
 libtool
 pcre
+cint
 
 Programs
 --------
@@ -30,3 +31,41 @@ memcached
 sqlite
 vim
 watch
+
+Others
+------
+Keyremap4Macbook (for f keys)
+PCKeyboardHack
+GPGTools
+1Password
+Adium
+Adobe*
+Alfred
+Base
+Caffeine
+DesktopMonitor
+Divvy
+Dropbox
+fantastical
+Firefox
+Flow
+Fluid
+Chrome
+GrabBox
+iTerm
+Jason
+KeePassX
+Last.fm
+Linkinus
+NeoOffice
+Rdio
+Sequel Pro
+Skype
+Sparrow
+Steam
+TotalSpaces
+TrueCrypt
+uTorrent
+VLC
+VMWare Fusion
+
