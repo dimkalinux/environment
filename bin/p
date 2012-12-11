@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
-URL=$(arc paste | grep -o -E "(http:\/\/.*)")
+INPUT=$(cat | perl -pe 's/\e\[?.*?[\@-~]//g')
+URL=$(echo -e "$INPUT" | arc paste | grep -o -E "(http:\/\/.*)")
 echo $URL | tr -d '\n' | pbcopy
 echo $URL
