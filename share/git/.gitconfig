@@ -1,21 +1,22 @@
 [user]
-	name = Artem Nezvigin
-	email = artem@artnez.com
+  name = Artem Nezvigin
+  email = artem@artnez.com
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
+  pager = less -E
 [diff]
     tool = vimdiff
 [color]
-	ui = true
-    branch = always
-    diff = always
-    status = always
+  ui = true
+  branch = always
+  diff = always
+  status = always
 [alias]
-    st = status
-    co = checkout
-    cm = commit
-    vlog = log --graph --date-order --date=relative --pretty=format:'%C(cyan)%h: %Cblue - %an - %Cgreen %C(cyan)%ar:%Creset%n%s%n' --color
-    info = !git branch && echo && git status && echo && git log -n2
-    tags = "!git tag | sort-versions"
-    msg = "!git log -n1 --format='%B' | php -r 'echo trim(file_get_contents(\"php://stdin\")) . \"\\n\";'"
-    record = "!git add -p && git commit -v $@"
+  st = status
+  co = checkout
+  cm = commit
+  vlog = log --graph --date-order --date=relative --pretty=format:'%C(cyan)%h: %Cblue - %an - %Cgreen %C(cyan)%ar:%Creset%n%s%n' --color
+  info = !git branch && echo && git status && echo && git log -n2
+  tags = "!git tag | sort-versions"
+  msg = "!git log -n1 --format='%B' | php -r 'echo trim(file_get_contents(\"php://stdin\")) . \"\\n\";'"
+  record = "!git add -p && git commit -v $@"
