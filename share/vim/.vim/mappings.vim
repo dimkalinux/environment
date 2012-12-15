@@ -47,7 +47,7 @@ nnoremap <left> <esc>:vertical resize -10<cr>
 nnoremap <right> <esc>:vertical resize +10<cr>
 
 " tag management
-nnoremap <c-p> :TlistToggle<cr>
+nnoremap <c-p> :TagbarToggle<cr>
 nnoremap <c-\> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
 nnoremap <c-t> <c-w><c-]><c-w>T
 
