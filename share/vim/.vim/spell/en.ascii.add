@@ -59,3 +59,4 @@ whitelist
 truthy
 namespace
 Harcode
+debouncing
