@@ -14,6 +14,7 @@ let g:pydoc_wh = 30
 let g:pydoc_highlight = 0
 
 " syntastic 
+let g:syntastic_csslint_options = '--errors=errors'
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_quiet_warnings = 0
 let g:syntastic_loc_list_height = 5
