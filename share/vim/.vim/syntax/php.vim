@@ -59,9 +59,7 @@ if !exists("main_syntax")
 endif
 
 runtime syntax/html.vim
-
-"New version of html.vim does not define a current_syntax
-"unlet b:current_syntax
+unlet b:current_syntax
 
 " Set sync method if none declared
 if !exists("php_sync_method")
