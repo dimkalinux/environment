@@ -6,8 +6,8 @@ nnoremap <c-s> <esc>:w<cr>
 
 " omnicompletion helpers
 inoremap <c-c> <c-x><c-o>
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif 
+autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|pclose|endif
+autocmd CursorMovedI * if pumvisible() == 0 && bufname("%") != "[Command Line]"|pclose|endif 
 
 " snippet handling 
 " these mappings are in after/plugin/snipmate.vim
