@@ -20,3 +20,6 @@ alias ssh='ssh -R2224:localhost:2224'
 # make sure pbcopy service is running
 launchctl list localhost.pbcopy &> /dev/null || \
     launchctl load $ENVDIR/share/iterm2/pbcopy/pbcopy.plist
+
+# Restarting coreaudiod. Makes airplay sound output work again.
+alias restartaudio="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' | awk '{print $1}'`"
