@@ -4,6 +4,7 @@ let g:tagbar_width = 50
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 let g:tagbar_show_visibility = 1
+let g:tagbar_sort = 0
 
 " command-t
 let g:CommandTMatchWindowReverse = 1
