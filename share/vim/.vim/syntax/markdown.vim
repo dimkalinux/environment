@@ -71,6 +71,10 @@ syn region markdownCode matchgroup=markdownCodeDelimiter start="^\s*\zs```\s*.*$
 syn match markdownEscape "\\[][\\`*_{}()#+.!-]"
 syn match markdownError "\w\@<=_\w\@="
 
+" An error for trailing whitespace, as long as the line isn't just whitespace
+syn match markdownSpaceError /\S\@<=\s\+$/ display
+hi def link markdownSpaceError Error
+
 hi def link markdownH1                    htmlH1
 hi def link markdownH2                    htmlH2
 hi def link markdownH3                    htmlH3
