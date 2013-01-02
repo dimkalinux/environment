@@ -51,3 +51,7 @@ let g:vdebug_options['ide_key'] = 'artem'
 
 " zencoding
 let g:user_zen_expandabbr_key = '<c-h>'
+let g:user_zen_settings = {
+\  'scss': {'filters' : 'fc'},
+\  'less': {'filters': 'fc'}
+\}
