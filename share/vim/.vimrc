@@ -19,6 +19,7 @@ set autoread
 set autowrite
 set viminfo='10,<100,:0,%,n~/.viminfo
 set sessionoptions=blank,buffers,folds,resize,slash,tabpages,winpos,winsize
+set nowritebackup
 
 " tabs
 set autoindent
