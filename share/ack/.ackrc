@@ -9,5 +9,6 @@
 --type-set=coffee=.coffee
 --type-set=phtml=.phtml
 --type-set=ini=.ini
+--type-set=less=.less
 
 --ignore-file=match:tags
