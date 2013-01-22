@@ -296,7 +296,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 2</string>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -337,13 +337,13 @@
 		<string>@h</string>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>534 416 924 485 0 0 1680 1028 </string>
+	<string>534 400 605 485 0 0 1680 1028 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Monaco</key>
 	<string>410 582 260 120 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1080 210 1080 1920 -1080 210 1080 1920 </string>
+	<string>0 0 1680 1050 0 0 1680 1028 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_8AEFC7AA-FB14-4EA0-AF67-0BE35FD469A4</key>
@@ -1047,7 +1047,7 @@
 			<key>Use Bright Bold</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>0.98577386140823364</real>
+			<real>0.99685919284820557</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -2539,7 +2539,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-09-29T07:15:02Z</date>
+	<date>2013-01-14T11:41:46Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
