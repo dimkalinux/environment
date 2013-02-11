@@ -3,3 +3,5 @@
     --enable-pythoninterp \
     --enable-rubyinterp \
     --enable-multibyte
+
+LC_ALL=C LANG=C make install
