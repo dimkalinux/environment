@@ -10,5 +10,7 @@
 --type-set=phtml=.phtml
 --type-set=ini=.ini
 --type-set=less=.less
+--type-add=py:ext:py
+--type-add=py:firstlinematch:/#!.*\bpython/
 
 --ignore-file=match:tags

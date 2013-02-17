@@ -17,6 +17,8 @@ Icon
 
 # python
 *.pyc
+.virtualenv
+.site-packages
 
 # ctags
 tags
