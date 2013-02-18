@@ -56,3 +56,4 @@ alias php-debug='php -dxdebug.idekey=artem -dxdebug.remote_autostart=1'
 
 # project tools
 alias watch-project="watch -n0.5 -c tree --dirsfirst -C --charset=ascii -I '*.pyc\|vendor\|psds'"
+alias v="source .virtualenv/bin/activate"
