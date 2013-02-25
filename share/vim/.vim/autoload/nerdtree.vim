@@ -1276,11 +1276,11 @@ endfunction
 " Reloads the current root. All nodes below this will be lost and the root dir
 " will be reloaded.
 function! s:refreshRoot()
-    call nerdtree#echo("Refreshing the root node. This could take a while...")
+    "call nerdtree#echo("Refreshing the root node. This could take a while...")
     call b:NERDTreeRoot.refresh()
     call nerdtree#renderView()
     redraw
-    call nerdtree#echo("Refreshing the root node. This could take a while... DONE")
+    "call nerdtree#echo("Refreshing the root node. This could take a while... DONE")
 endfunction
 
 " FUNCTION: s:refreshCurrent(node) {{{2
@@ -1291,11 +1291,11 @@ function! s:refreshCurrent(node)
         let node = node.parent
     endif
 
-    call nerdtree#echo("Refreshing node. This could take a while...")
+    "call nerdtree#echo("Refreshing node. This could take a while...")
     call node.refresh()
     call nerdtree#renderView()
     redraw
-    call nerdtree#echo("Refreshing node. This could take a while... DONE")
+    "call nerdtree#echo("Refreshing node. This could take a while... DONE")
 endfunction
 
 " FUNCTION: s:showMenu(node) {{{2
