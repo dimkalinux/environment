@@ -22,6 +22,7 @@ Icon
 
 # ctags
 tags
+.ctags
 
 # nfs
 .nfs*
