@@ -1239,11 +1239,11 @@ endfunction
 
 " FUNCTION: s:openNodeRecursively(node) {{{2
 function! s:openNodeRecursively(node)
-    call nerdtree#echo("Recursively opening node. Please wait...")
+    "call nerdtree#echo("Recursively opening node. Please wait...")
     call a:node.openRecursively()
     call nerdtree#renderView()
     redraw
-    call nerdtree#echo("Recursively opening node. Please wait... DONE")
+    "call nerdtree#echo("Recursively opening node. Please wait... DONE")
 endfunction
 
 "FUNCTION: s:previewNodeCurrent(node) {{{2
