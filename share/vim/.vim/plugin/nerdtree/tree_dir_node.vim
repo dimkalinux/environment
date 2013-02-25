@@ -237,7 +237,7 @@ function! s:TreeDirNode._initChildren(silent)
     let files = split(filesStr, "\n")
 
     if !a:silent && len(files) > g:NERDTreeNotificationThreshold
-        call nerdtree#echo("Please wait, caching a large dir ...")
+        "call nerdtree#echo("Please wait, caching a large dir ...")
     endif
 
     let invalidFilesFound = 0
@@ -261,7 +261,7 @@ function! s:TreeDirNode._initChildren(silent)
     call self.sortChildren()
 
     if !a:silent && len(files) > g:NERDTreeNotificationThreshold
-        call nerdtree#echo("Please wait, caching a large dir ... DONE (". self.getChildCount() ." nodes cached).")
+        "call nerdtree#echo("Please wait, caching a large dir ... DONE (". self.getChildCount() ." nodes cached).")
     endif
 
     if invalidFilesFound
