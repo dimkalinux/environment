@@ -1,0 +1,37 @@
+#! /usr/bin/env bash
+
+ACTION=$1; shift
+
+PID=""
+getpid() {
+  PID=$(ps x | grep '[r]edis-server' | head -n1 | awk '{ print $1 }')
+}
+
+start() {
+  getpid
+  [ -n "$PID" ] && echo "Redis already running as $PID." && exit
+  echo "Starting Redis..."
+  redis-server ~/.redis && getpid
+  echo "Redis running as $PID."
+}
+
+stop() {
+  getpid
+  [ -z "$PID" ] && echo 'Redis is not running.' && exit
+  echo "Stopping Redis..."
+  kill $PID
+  echo "Redis process stopped."
+}
+
+cli() {
+  getpid
+  [ -z "$PID" ] && start
+  redis-cli
+}
+
+case "$ACTION" in
+  'start') start ;;
+  'stop')  stop ;;
+  'cli') cli ;;
+  *) echo "`basename $0` [start|stop|cli] [options]"
+esac

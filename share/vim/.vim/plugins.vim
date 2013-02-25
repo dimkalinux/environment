@@ -57,3 +57,6 @@ let g:user_zen_settings = {
 \  'scss': {'filters' : 'fc'},
 \  'less': {'filters': 'fc'}
 \}
+
+" nerdtree
+let NERDTreeIgnore = ['\.pyc$', 'tags']
