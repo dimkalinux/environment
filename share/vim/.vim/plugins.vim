@@ -59,4 +59,4 @@ let g:user_zen_settings = {
 \}
 
 " nerdtree
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', 'tags']
