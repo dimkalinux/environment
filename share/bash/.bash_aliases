@@ -56,5 +56,5 @@ alias php-debug='php -dxdebug.idekey=artem -dxdebug.remote_autostart=1'
 
 # project tools
 alias watch-project="watch -n0.5 -c tree --dirsfirst -C --charset=ascii -I '*.pyc\|psds'"
-alias v="source .virtualenv/bin/activate"
+alias env="source .virtualenv/bin/activate"
 alias nerd="vim -c 'NERDTree | only | set relativenumber'"
