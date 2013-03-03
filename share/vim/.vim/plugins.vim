@@ -60,3 +60,6 @@ let g:user_zen_settings = {
 
 " nerdtree
 let NERDTreeIgnore = ['\.pyc$', 'tags']
+
+" jedi
+let g:jedi#popup_on_dot = 0
