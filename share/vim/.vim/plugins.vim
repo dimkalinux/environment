@@ -59,7 +59,12 @@ let g:user_zen_settings = {
 \}
 
 " nerdtree
-let NERDTreeIgnore = ['\.pyc$', 'tags']
+let NERDTreeIgnore = [
+\  '\.pyc$',
+\  'tags',
+\  'tmp\.[css|css]$',
+\  'cmp\.[js|css]$'
+\]
 
 " jedi
 let g:jedi#popup_on_dot = 0
