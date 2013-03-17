@@ -47,6 +47,7 @@ alias utime="date '+%s'"
 # command wrappers
 alias less='less -R'
 alias flow='git flow'
+alias delta='git diff --no-index'
 
 # lorem ipsum
 alias ipsum='lorem-ipsum-generator'
