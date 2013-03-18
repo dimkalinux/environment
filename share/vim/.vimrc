@@ -34,7 +34,7 @@ set ruler
 set nowrap
 set showcmd
 set showmatch
-set colorcolumn=81
+set colorcolumn=80
 set cursorline
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set laststatus=2
