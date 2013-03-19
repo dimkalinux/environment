@@ -15,6 +15,7 @@ done
 # Load plugins
 [ -e $HOME/.gitcomplete ] && source $HOME/.gitcomplete
 [ -e $HOME/.sshcomplete ] && source $HOME/.sshcomplete
+[ -e $HOME/.vagrantcomplete ] && source $HOME/.vagrantcomplete
 
 # Load OS X specifics
 if [ "$(uname)" == "Darwin" ]; then
